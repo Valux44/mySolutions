@@ -17,6 +17,7 @@ const init = () => {
     }
     let innerFunc = create;
     api.push(innerFunc);
+    api.push(read);
     return api
     // return create;
 };
