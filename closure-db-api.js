@@ -12,7 +12,7 @@ const init = () => {
 
     };
     const read = () => {
-        // return db.slice(...db);
+        // return db.slice(...db);                     //this was my initial code 
         return [...db];
     }
     let innerFunc = create;
@@ -24,8 +24,13 @@ const init = () => {
 
 const createInDb = init();
 
-console.log(createInDb[0](1));
+
+
+console.log(createInDb[0]('lets'));
 console.log(createInDb[0]('see'));
 console.log(createInDb[0]('if'));
 console.log(createInDb[0]('this'));
 console.log(createInDb[0]('works'));
+console.log(createInDb[1]());
+read().push('hack');
+console.log(createInDb[1]());
