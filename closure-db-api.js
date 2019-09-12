@@ -11,15 +11,16 @@ const init = () => {
         // return db;             // if you want to log the actual contents of the array
 
     };
-
-    api.push(create);
+    let innerFunc = create;
+    api.push(innerFunc);
     return api
+    // return create;
 };
 
 const createInDb = init();
 
-console.log(createInDb(1));
-console.log(createInDb('see'));
-console.log(createInDb('if'));
-console.log(createInDb('this'));
-console.log(createInDb('works'));
+console.log(createInDb[0](1));
+console.log(createInDb[0]('see'));
+console.log(createInDb[0]('if'));
+console.log(createInDb[0]('this'));
+console.log(createInDb[0]('works'));
