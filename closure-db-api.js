@@ -7,6 +7,7 @@ function init() {
     function create(element) {
         db.push(element);
         return (db.length);
+        // return db;             // if you want to log the actual contents of the array
 
     }
     return create
