@@ -11,6 +11,10 @@ const init = () => {
         // return db;             // if you want to log the actual contents of the array
 
     };
+    const read = () => {
+        // return db.slice(...db);
+        return [...db];
+    }
     let innerFunc = create;
     api.push(innerFunc);
     return api
