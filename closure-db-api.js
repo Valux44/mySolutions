@@ -23,8 +23,8 @@ const init = () => {
         if (index < 0) {
             return 'GitRekt...Noob!'
         }
-        if (index = '' && index > (db.length - 1)) {
-            create();
+        if (index > (db.length - 1) && (index = '')) {
+            create(newElement);
 
         }
 
@@ -52,3 +52,7 @@ console.log(createInDb[1]());
 console.log(createInDb[1]());
 console.log(createInDb[2](0, 'lets update and'));
 console.log(createInDb[2](-1, 'whaaaaaa!'));
+console.log(createInDb[1]());
+createInDb[2](5, 'whaaaaaa!');
+//console.log(createInDb[2](5, 'whaaaaaa!'));
+console.log(createInDb[1]())
