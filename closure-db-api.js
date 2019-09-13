@@ -2,7 +2,7 @@
 // Closure exercise
 
 const init = () => {
-    const db = [];
+    let db = [];
     let api = [];
 
     const create = element => {
@@ -19,7 +19,7 @@ const init = () => {
     const update = (index, newElement) => {
         if (index >= 0 && index <= (db.length - 1)) {
             db[index] = newElement;
-            return db;
+            // return db;
         }
         if (index < 0) {
             return 'GitRekt...Noob!'
@@ -30,10 +30,22 @@ const init = () => {
         }
 
     }
+    let Delete = delElementIndex => {
+        if (delElementIndex >= 0 && delElementIndex <= (db.length - 1)) {
+            db.splice(delElementIndex, 1);
+            // return db;
+        }
+        else {
+            return console.log('GitRektAgain!LOL!')
+        }
+
+
+    }
 
     api.push(create);
     api.push(read);
     api.push(update);
+    api.push(Delete);
     // api = [create, read, update];
     return api
     // return create;
@@ -51,9 +63,11 @@ console.log(createInDb[0]('works'));
 console.log(createInDb[1]());
 // read().push('hack');
 console.log(createInDb[1]());
-console.log(createInDb[2](0, 'lets update and'));
+createInDb[2](0, 'lets update and');
 console.log(createInDb[2](-1, 'whaaaaaa!'));
 console.log(createInDb[1]());
 createInDb[2](5, 'whaaaaaa!');
 //console.log(createInDb[2](5, 'whaaaaaa!'));
-console.log(createInDb[1]())
+console.log(createInDb[1]());
+createInDb[3](5);
+console.log(createInDb[1]());
