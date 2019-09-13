@@ -71,3 +71,4 @@ createInDb[2](5, 'whaaaaaa!');
 console.log(createInDb[1]());
 createInDb[3](5);
 console.log(createInDb[1]());
+createInDb[3](6);
