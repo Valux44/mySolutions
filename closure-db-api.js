@@ -3,7 +3,7 @@
 
 const init = () => {
     const db = [];
-    const api = [];
+    let api = [];
 
     const create = element => {
         db.push(element);
@@ -15,9 +15,20 @@ const init = () => {
         // return db.slice(...db);                     //this was my initial code 
         return [...db];
     }
-    let innerFunc = create;
-    api.push(innerFunc);
+    const update = (index, newElement) => {
+        if (index >= 0 && index <= (db.length - 1)) {
+            db[index] = newElement;
+            return db;
+        }
+        else {
+            return 'GitRekt...Noob!'
+        }
+    }
+
+    api.push(create);
     api.push(read);
+    api.push(update);
+    // api = [create, read, update];
     return api
     // return create;
 };
@@ -32,5 +43,7 @@ console.log(createInDb[0]('if'));
 console.log(createInDb[0]('this'));
 console.log(createInDb[0]('works'));
 console.log(createInDb[1]());
-read().push('hack');
+// read().push('hack');
 console.log(createInDb[1]());
+console.log(createInDb[2](0, 'lets update and'));
+console.log(createInDb[2](-1, 'whaaaaaa!'));
