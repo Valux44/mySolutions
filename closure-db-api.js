@@ -7,7 +7,8 @@ const init = () => {
 
     const create = element => {
         db.push(element);
-        return (db.length);
+
+        return (`New Element added! The new length of the array is ${db.length}`);
         // return db;             // if you want to log the actual contents of the array
 
     };
@@ -23,7 +24,7 @@ const init = () => {
         if (index < 0) {
             return 'GitRekt...Noob!'
         }
-        if (index > (db.length - 1) && (index = '')) {
+        if (index > (db.length - 1)) {
             create(newElement);
 
         }
