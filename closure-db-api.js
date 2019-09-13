@@ -20,9 +20,14 @@ const init = () => {
             db[index] = newElement;
             return db;
         }
-        else {
+        if (index < 0) {
             return 'GitRekt...Noob!'
         }
+        if (index = '' && index > (db.length - 1)) {
+            create();
+
+        }
+
     }
 
     api.push(create);
